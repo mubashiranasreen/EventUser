@@ -6,13 +6,13 @@ from .models import Event, Invitation
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'email')
+        fields = ('id', 'email')
 
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('id','username','title', 'description', 'creator', 'collaborators')
+        fields = ('id', 'title', 'description', 'creator', 'collaborators')
 
 
 class InvitationSerializer(serializers.ModelSerializer):
